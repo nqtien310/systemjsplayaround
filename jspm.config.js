@@ -245,12 +245,19 @@ SystemJS.config({
       }
     }
   },
-  transpiler: "plugin-typescript",
+  typescriptOptions: {
+    target: 'es2015',
+    module: 'system',
+    sourceMap: true,
+    experimentalDecorators: true,
+    emitDecoratorMetadata: true
+  },
   packages: {
-    "systemjsplayaround": {
-      "main": "systemjsplayaround.js",
+    "src/app": {
+      "main": "index",
+      "defaultExtension": "ts",
       "meta": {
-        "*.js": {
+        "*.ts": {
           "loader": "plugin-typescript"
         }
       }
