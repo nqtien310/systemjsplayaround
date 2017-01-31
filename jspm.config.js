@@ -246,11 +246,11 @@ SystemJS.config({
     }
   },
   typescriptOptions: {
-    target: 'es2015',
-    module: 'system',
-    sourceMap: true,
-    experimentalDecorators: true,
-    emitDecoratorMetadata: true
+    "target": "es2015",
+    "module": "system",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   packages: {
     "src/app": {
@@ -258,7 +258,8 @@ SystemJS.config({
       "defaultExtension": "ts",
       "meta": {
         "*.ts": {
-          "loader": "plugin-typescript"
+          "loader": "plugin-typescript",
+          "format": "es6"
         }
       }
     }
@@ -271,6 +272,8 @@ SystemJS.config({
     "npm:@*/*.json",
     "npm:*.json"
   ],
-  map: {},
+  map: {
+    "jquery": "npm:jquery@3.1.1"
+  },
   packages: {}
 });

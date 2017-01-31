@@ -15,6 +15,9 @@
   "jspm": {
     "name": "systemjsplayaround",
     "main": "systemjsplayaround.js",
+    "dependencies": {
+      "jquery": "npm:jquery@^3.1.1"
+    },
     "devDependencies": {
       "assert": "npm:jspm-nodelibs-assert@^0.2.0",
       "buffer": "npm:jspm-nodelibs-buffer@^0.2.0",
@@ -39,6 +42,9 @@
         "ignore": [
           "test.js"
         ]
+      },
+      "npm:jquery@3.1.1": {
+        "format": "amd"
       },
       "npm:typescript@2.1.5": {
         "browser": {},

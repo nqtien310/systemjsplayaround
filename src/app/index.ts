@@ -1,10 +1,3 @@
-class Greeter {
-    constructor(public greeting: string) { }
-    greet() {
-        return "<h1>" + this.greeting + "</h1>";
-    }
-};
+import Calculator from './calculator'
 
-var greeter = new Greeter("Hello, world!");
-
-document.body.innerHTML = greeter.greet();
+new Calculator('#calculator').render();
