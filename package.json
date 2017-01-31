@@ -16,6 +16,7 @@
     "name": "systemjsplayaround",
     "main": "systemjsplayaround.js",
     "dependencies": {
+      "bootstrap": "github:twbs/bootstrap@^3.3.7",
       "jquery": "npm:jquery@^3.1.1"
     },
     "devDependencies": {
@@ -38,6 +39,27 @@
       "vm": "npm:jspm-nodelibs-vm@^0.2.0"
     },
     "overrides": {
+      "github:twbs/bootstrap@3.3.7": {
+        "main": "js/bootstrap.js",
+        "dependencies": {
+          "jquery": "jspm:jquery@*"
+        },
+        "files": [
+          "dist",
+          "fonts",
+          "js",
+          "css"
+        ],
+        "meta": {
+          "js/bootstrap.js": {
+            "deps": [
+              "jquery"
+            ],
+            "exports": "$",
+            "format": "global"
+          }
+        }
+      },
       "npm:inherits@2.0.3": {
         "ignore": [
           "test.js"

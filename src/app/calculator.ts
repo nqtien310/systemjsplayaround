@@ -66,18 +66,14 @@ export default class Calculator {
     if(this.queue.length == 3){
       throw new TypeError("Queue length exceed 3");
     }
-    console.log(`ADDING ${ele} into queue`);
     this.queue.push(ele);
-    console.log(`Current queue ${this.queue}`);
   }
 
   clearQueue() {
     this.queue = []
   }
 
-
   isCalculable() {
-    console.log(`QUEUE LENGTH: ${this.queue.length}`);
     return this.queue.length == 3
   }
 
@@ -92,7 +88,7 @@ export default class Calculator {
   renderOperands = () => {
     for(let keys of [ [1,2,3], [4,5,6], [7,8,9], [0] ]) {
       for(let key of keys) {
-        this.renderBtn(key, {"classes": "operand"});
+        this.renderBtn(key, {"classes": "operand btn-default"});
       }
       this.renderBreak();
     }
@@ -100,7 +96,7 @@ export default class Calculator {
 
   renderOperators = () => {
     for(let key of ['+', '-', '*', '/']) {
-      this.renderBtn(key, {"classes": "operator"});
+      this.renderBtn(key, {"classes": "operator btn-primary"});
     }
     this.renderBreak();
   }
