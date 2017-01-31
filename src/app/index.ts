@@ -1,3 +1,3 @@
 import Calculator from './calculator'
 
-new Calculator('#calculator').render();
+new Calculator('#calculator', {log: true}).init();
