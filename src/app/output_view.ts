@@ -1,16 +1,10 @@
-export default class OutputView {
-  constructor(container) {
-    this.container = container;
-  }
+import View from './view'
 
+export default class OutputView extends View{
   render = () => {
-    $(this.container).append(` <input id="output" /> `);
+    $(this.container).append(` <input id="output" class="form-control"/> `);
     this.output(0, "reset");
     this.renderBreak();
-  }
-
-  renderBreak = () => {
-    $(this.container).append(` <div class='break'/> `)
   }
 
   output = (value, mode) => {

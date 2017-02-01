@@ -5,7 +5,7 @@ export default class CalculatingQueue {
   }
 
   add(ele) {
-    if(this.queue.length == 3){
+    if(this.queue.length >= 3){
       throw new TypeError("Queue length exceed 3");
     }
     this.queue.push(ele);
@@ -13,7 +13,9 @@ export default class CalculatingQueue {
   }
 
   calculate() {
-    return eval(this.queue.join(""));
+    let result = eval(this.queue.join(""));
+    this.clear();
+    return result;
   }
 
   isCalculable() {
@@ -23,4 +25,5 @@ export default class CalculatingQueue {
   clear() {
     this.queue = [];
   }
+
 }
